@@ -1,3 +1,7 @@
+if(undefined === d3){
+  var d3 = require('d3');
+}
+
 var RadarChart = {
   defaultConfig: {
     containerClass: 'radar-chart',
@@ -378,3 +382,7 @@ var RadarChart = {
     .call(chart);
   }
 };
+
+if(undefined !== module){
+  module.exports = RadarChart;
+}
